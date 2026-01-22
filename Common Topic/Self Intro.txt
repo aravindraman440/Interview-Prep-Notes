@@ -1,0 +1,23 @@
+Good morning Hari, thank you for giving me this opportunity to introduce myself.
+
+My name is Aravinthan. I am originally from Karur, Tamil Nadu, and I am currently based in Kondapur, Hyderabad.
+
+I am currently working at Lloyds Technology Centre, Hyderabad, a product-based organization in the Banking and Financial Services domain, 
+under Lloyds Banking Group, which includes brands such as Lloyds, Halifax, Bank of Scotland, and MBNA.
+
+I have around 5 years of experience in Software Testing, with strong expertise in both Manual and Automation Testing.
+
+In automation, I have hands-on experience with Selenium using Java and Playwright using TypeScript. I have worked extensively with TestNG, 
+Cucumber, Page Object Model (POM), Hybrid, Data-Driven, and Keyword-Driven frameworks.
+
+I also have experience in API test automation using Postman and Rest Assured. For end-to-end automation, I use the Playwright Test Runner, 
+which supports features such as auto-waiting, parallel execution, fixtures, retries, test isolation, and built-in reporting, 
+providing a complete automation solution without the need for external runners.
+
+As part of my role, I am involved in requirement analysis, test case design, functional and regression testing, defect tracking, and CI/CD integration.
+ We use Jira for defect management and Xray for test case management, where we classify test cases as Automatable and Non-Automatable.
+
+I am passionate about delivering high-quality, stable applications and continuously improving my testing skills.
+I am looking forward to contributing my expertise and growing in a challenging role.
+
+Thank you.

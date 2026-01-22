@@ -1,0 +1,110 @@
+Framework Explanation
+Here is the **exact same style**, **same tone**, **same flow**, **same formatting**, but rewritten for **Playwright UI + API framework**
+— just like your Selenium explanation.
+No folder structure breakdown. Only theory.
+This is exactly interview-ready.
+
+---
+
+# ✅ **Playwright UI + API Framework Explanation (Same Style as Your Selenium Version)**
+
+The framework that we used in our project is based on the design pattern called the **Page Object Model**, and for API automation we also follow a **Service Object Model**.
+It is an extended version of the object-model design pattern. In this design pattern, we build the entire framework on top of a structured design, and we maintain a clean and scalable hierarchy for both UI and API test automation.
+
+We use **TypeScript** as the programming language, **npm** as our build and dependency management tool, and we use the **Playwright Test Runner**, which is an in-built runner provided by Playwright, to execute our test cases.
+Playwright itself acts as the **browser automation component** to interact with the web application for UI testing, and at the same time Playwright also supports **API automation**, which we leverage for validating backend REST APIs.
+In addition to that, we use **Cucumber BDD**, which helps us write test scenarios in a business-readable Gherkin format so that the entire team can easily understand the test flow.
+
+---
+
+## **Can you explain the physical folder structure in our project?**
+
+We have some physical structure which we are using.
+Our architect initially designed the entire framework, where he started building the design package using **interfaces and abstract classes**.
+The interfaces contain the unimplemented reusable methods for both UI actions (like click, fill, wait, navigation) and API actions (like GET, POST, PUT, DELETE).
+
+Before I joined this project, my teammates had developed a **wrapper layer**.
+The wrapper class contains the design implementation where all the unimplemented interface methods were fully implemented.
+In addition to this, the wrapper layer contains proper **exception handling, reusable utilities, logging**, and common Playwright functions that are widely used across the framework.
+This wrapper acts as the base layer for both UI and API automation.
+
+---
+
+## **Hooks Package**
+
+The Hooks package consists of different methods related to Cucumber annotations such as **Before, After, BeforeAll, AfterAll**.
+These hooks manage:
+
+* browser initialization,
+* context creation,
+* closing the browser,
+* capturing screenshots on test failures,
+* attaching report details,
+* and also setting up the API request context for API test scenarios.
+
+Hooks help us maintain the complete lifecycle of both UI and API test execution.
+
+---
+
+## **Utility Package**
+
+The Utility package is responsible for handling external resources as well as framework-level reusable logic.
+For UI, we have utilities that help in reading test data, handling waits, browser actions, screenshots, and logger setup.
+For API, we have utilities that help in forming API requests, validating responses, generating tokens, schema validation, and parsing JSON data.
+
+In addition to this, we generate different types of reports such as HTML reports or Allure reports, and the utility package also contains the logic to attach screenshots and logs to the reports.
+
+---
+
+## **Pages Package (UI + API)**
+
+In the pages package, we maintain separate classes for both **UI Pages** and **API Service classes**.
+
+* For **UI pages**, we store all our locators and page actions using Playwright locators like XPath, CSS, or role locators.
+  We do not use PageFactory because it is deprecated and also not needed in Playwright since Playwright handles locators differently and more efficiently.
+
+* For **API pages**, we maintain reusable service classes where we define API endpoints, payload handling, request functions, and response validation methods.
+
+These pages are used by the respective test cases or step definitions in the BDD framework.
+
+---
+
+Overall Structure 
+
+This is the folder structure we have defined under our source directories.
+In addition to that, under the root folder, we maintain configuration files, environment property files, and Playwright configuration files.
+All of these together constitute our complete Playwright automation framework that supports both **UI** and **API** automation in a unified and scalable manner.
+
+
+
+
+
+
+
+Framework Hirarchy:
+main 
+    1.resources - 
+    2.src
+
+ resource 
+      1.data    ------> API payloads,schema
+      2.feature    ---> API feature aand Web Features
+      3.ui data    ---> login url
+
+SRC
+    1.pages     ----->API pages and webpages
+    2.StepDefnition -->API steps and web steps
+    3.testdata      --> UI test data json file format
+    4.utills       --->here we have 2 files  common methods for API and UI
+                      APIUtills.ts   
+                      UIutills.ts
+
+
+
+
+1.I have to write feature file
+2.Implement those feature file stpe to Step defnition (here i write feature file stpe along with what action we have to perform here like method "Select debit card")
+3.AS per page object model we are segretate the pages here 
+  Each page should implement in the customworld.ts file. this file under common folder
+  here I have to write xpath and call the code resuability methods and erform assertion also
+

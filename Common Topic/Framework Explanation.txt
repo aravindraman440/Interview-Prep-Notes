@@ -1,0 +1,26 @@
+The framework that we used in our project is based on the Design pattern called page object model . 
+It is also extended version of Pattern object Model . in this design pattern 
+we build the entire framework on top of the design pattern and we have a Structure to it, 
+we use core java as programming language , we use maven as build tool , we are using apache poi to read the data from excel 
+and we 
+are using testng as a runner , 
+selenium webdriver as our browser component to Interact with webApplication, in addition to that we  use cucumber for BDD framework..
+
+Can you to explain to physical folder in our project?
+   
+                      we  have some  physical structure which we are using of.
+our architecht will design the framework intially he starts building the design package in interface 
+interface has unimplemented methods on that   mean time i have joined in this project before myjoinining my team mates has
+devoleped the wrapper class. the wrapper class has design package where all unimplemented methods will be implemented from that.
+in addition to this in the wrapper class where they have properly used exceptional handling.
+
+
+ Hooks package Consists of different methods namely Testng ,Cucmber and  Annatations
+Utility package is used to read the data from excel .Moreover it has extend report class which is used to generate the html report
+(inorder to excute the testcases and it takes the screenshot of every methods)
+
+in pom we have pages as a package in this package we have many implementation of pages,in this we will not opt for implementation pagefactory
+since it is depricated therefore we are using regular X-path for regular pages packages which is followed by respective testcases
+this is our folder structure our define inside java ..
+     In addition to that source main property we also have properties files and xml files 
+to root folder which constitude of our framework look like ..

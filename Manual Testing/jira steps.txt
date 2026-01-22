@@ -1,0 +1,32 @@
+Link for agile mcqs:
+https://mcqpoint.com/mcq/agile-scrum/
+
+LInk for java:
+https://www.javatpoint.com/java-oops-concepts
+
+
+
+
+User story ->Requirement
+Epic --> Collection of user story
+
+How to add plug-in in Jira??
+
+Jira Login -->Apps-->Exlpore more apps
+
+It will list out all the plug-ins actually.
+
+In that select,AIO (All In One Test Management tool for Jira)  -->It will be free for 10 members
+
+Test Management In jira -> Start free trial 
+
+How to use in Jira?
+
+1.First u have to create a project in jira
+
+2.Create a Issue that issue type will be like Story. After creating the user story,U can add summary for the story.
+
+Once you installed the AIO plugin,Click AIO tests which will be present in left side.
+
+For the 1st time, u have to enable that by clicking the Enable button.
+

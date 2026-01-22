@@ -1,0 +1,49 @@
+*Elicheck Journey – Interview*
+
+Paragraph
+
+"In the Elicheck Journey, my work focused on the eligibility stage of the lending flow, where new customers like NTF or NTB users enter 
+their account details to check if they qualify for a personal loan. This journey validates key fields such as sort code, 
+account number, and how long the customer has held the account, and then generates a loan decision. I tested the entire flow from input 
+validations to the 'Our Decision' page, ensuring the loan amount, monthly repayment, and total payable were displayed accurately and aligned with the
+ updated UI designs. I also validated the Edit Loan functionality, where customers can adjust their loan amount and tenure before finalizing the offer.
+ This journey is crucial because it determines whether a customer can proceed with a full application, so my focus was on accuracy, data validation, branding 
+consistency, and a smooth customer experience."
+
+
+Overpayment Journey – Interview
+
+Paragraph
+
+"In the Overpayment Journey, I tested the experience for existing loan customers who want to make an extra payment toward their loan to reduce 
+the outstanding balance, future interest, or loan duration. This journey involves several flow types like Happy Path, Arrears Flow, No Direct Debit, 
+and DXC Offline scenarios across brands such as Lloyds, Halifax, BOS, and MBNA. My responsibilities included validating the interstitial screens -like 
+Checking Loan, Getting Account Details, and Making Payment ensuring the right information was shown at each step. I also verified Adobe Analytics tagging, 
+where each journey step had to correctly fire events for tracking, such as 'Journey Step Name', 'Step Number', and 'Journey Status'. I performed UI, functional, 
+and analytics validation to make sure the Overpayment flow was error-free, brand-consistent, and accurately captured customer behaviour for reporting."
+
+
+
+Early Settlement Journey - Interview
+
+Paragraph
+
+"In the Early Settlement Journey, I was responsible for validating the process where a customer chooses to close their loan early by paying the full 
+settlement amount. This journey calculates the outstanding balance, interest up to the settlement date, and any applicable fees. I tested scenarios such 
+as DD near-due dates, holiday shifts, quote retrieval accuracy, and API error handling to ensure the settlement amount shown to customers was correct. On 
+the Settlement Quote Page, I validated the redesigned Ul, tooltips explaining how calculations work, and brand-specific layouts for Halifax, Lloyds, and BOS. 
+I also tested the payment flow, confirmation screens, and edge-case behaviours like missing quote data or invalid API responses. This journey directly impacts 
+financial accuracy and regulatory compliance, so I ensured all calculations and displays were fully correct and aligned with backend rules."
+
+
+Combined Project Explanation Paragraph (Elicheck + Overpayment + Early Settlement)
+
+
+"In my current role, I have been involved in testing three major servicing journeys-Elicheck, Overpayment, and Early Settlement across 
+multiple brands like Lloyds, Halifax, BOS, and MBNA. In the Elicheck Journey, I validated the entire eligibility flow for NTB/NTF customers, 
+including account-level validations, decision accuracy, updated Ul content, and the Edit Loan functionality. In the Overpayment Journey, I tested
+ scenarios where customers make an extra payment toward their loan, covering multiple flows such as Happy Path, Arrears, and No Direct Debit. I validated 
+the interstitial screens, payment behaviour, and Adobe Analytics tagging to ensure every step fired correct journey events. In the Early Settlement Journey, 
+I verified the settlement quote calculations, interest breakdown, DD-near-due scenarios, and holiday shift logic, ensuring financial accuracy and compliance.
+ Across all three journeys, my focus has been on functional correctness, data accuracy, cross-brand consistency, Ul alignment, API validations, and providing a 
+smooth customer experience end-to-end."
