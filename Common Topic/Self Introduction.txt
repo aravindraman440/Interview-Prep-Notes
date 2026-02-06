@@ -24,3 +24,62 @@ I am looking forward to contributing my expertise and growing in a challenging r
 
 Thank you.
 
+
+Data-Driven Framework
+A Data-Driven Framework means: Test logic is fixed, but test data comes from external sources
+You write the test once, and run it multiple times with different data.
+Where is the data stored --> Usually in: Excel (.xlsx), CSV, JSON, XML, Database
+
+Advantages:
+✅ Less code duplication
+✅ Easy to add new test cases (just add data)
+✅ Great for functional testing
+
+Disadvantages
+❌ Only data changes, not steps
+❌ Complex scenarios still need code changes
+
+When to use?
+✔ Same test flow
+✔ Different inputs
+✔ Regression testing
+
+Keyword-Driven Framework
+A Keyword-Driven Framework means: Test steps are controlled using keywords instead of code
+Testers don’t write code — they write keywords.
+
+How it works internally
+
+Each keyword maps to a method:
+OPEN_BROWSER → openBrowser()
+CLICK → clickElement()
+ENTER_TEXT → enterText()
+Selenium example (Java – conceptual)
+switch(keyword) {
+  case "CLICK":
+    click(locator);
+    break;
+  case "ENTER_TEXT":
+    enterText(locator, value);
+
+Advantages
+✅ Non-technical users can write tests
+✅ High reusability
+✅ Very readable test cases
+
+Disadvantages
+❌ Framework becomes complex
+❌ Hard to debug
+❌ Slow execution if poorly designed
+
+When to use?
+✔ Business users involved
+✔ Large teams
+✔ Long-term maintenance
+
+
+
+
+
+
+
