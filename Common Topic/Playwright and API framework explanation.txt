@@ -8,10 +8,13 @@ This is exactly interview-ready.
 
 # ✅ **Playwright UI + API Framework Explanation (Same Style as Your Selenium Version)**
 
-The framework that we used in our project is based on the design pattern called the **Page Object Model**, and for API automation we also follow a **Service Object Model**.
-It is an extended version of the object-model design pattern. In this design pattern, we build the entire framework on top of a structured design, and we maintain a clean and scalable hierarchy for both UI and API test automation.
+The framework that we used in our project is based on the design pattern called the **Page Object Model**, 
+and for API automation we also follow a **Service Object Model**.
+It is an extended version of the object-model design pattern. In this design pattern, we build the entire framework on top of a structured design, 
+and we maintain a clean and scalable hierarchy for both UI and API test automation.
 
-We use **TypeScript** as the programming language, **npm** as our build and dependency management tool, and we use the **Playwright Test Runner**, which is an in-built runner provided by Playwright, to execute our test cases.
+We use **TypeScript** as the programming language, **npm** as our build and dependency management tool, 
+and we use the **Playwright Test Runner**, which is an in-built runner provided by Playwright, to execute our test cases.
 Playwright itself acts as the **browser automation component** to interact with the web application for UI testing, and at the same time Playwright also supports **API automation**, which we leverage for validating backend REST APIs.
 In addition to that, we use **Cucumber BDD**, which helps us write test scenarios in a business-readable Gherkin format so that the entire team can easily understand the test flow.
 
