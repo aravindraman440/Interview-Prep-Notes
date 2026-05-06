@@ -4,7 +4,7 @@ Good morning Hari, thank you for giving me this opportunity to introduce myself.
 
 My name is Aravinthan. I am originally from Karur, Tamil Nadu, and I am currently based in Kondapur, Hyderabad.
 
-I am currently working at Lloyds Technology Centre, Hyderabad, a product-based organization in the Banking and Financial Services domain, 
+I was previously working at Lloyds Technology Centre, Hyderabad, a product-based organization in the Banking and Financial Services domain, 
 under Lloyds Banking Group, which includes brands such as Lloyds, Halifax, Bank of Scotland, and MBNA.
 
 I have around 5 years of experience in Software Testing, with strong expertise in both Manual and Automation Testing.
@@ -16,13 +16,29 @@ I also have experience in API test automation using Postman and Rest Assured. Fo
 which supports features such as auto-waiting, parallel execution, fixtures, retries, test isolation, and built-in reporting, 
 providing a complete automation solution without the need for external runners.
 
-As part of my role, I am involved in requirement analysis, test case design, functional and regression testing, defect tracking, and CI/CD integration.
- We use Jira for defect management and Xray for test case management, where we classify test cases as Automatable and Non-Automatable.
+Recently, I took a short career break due to my marriage and to handle family responsibilities, as I am the primary person managing things at home. Now that everything is stable, I am fully ready and eager to restart my career.
 
 I am passionate about delivering high-quality, stable applications and continuously improving my testing skills.
 I am looking forward to contributing my expertise and growing in a challenging role.
 
 Thank you.
+
+Roles & Responsibilities 
+In my previous role, I was involved in end-to-end testing activities.
+
+I participated in requirement analysis and collaborated with developers and business analysts to understand the scope.
+
+I was responsible for test case design, test data preparation, and execution of functional and regression test cases.
+
+In automation, I developed and maintained scripts using Selenium and Playwright, following the Page Object Model design pattern.
+
+I also worked on API testing using Postman and Rest Assured.
+
+Additionally, I was involved in defect tracking using Jira and test case management using Xray, where we categorized test cases as automatable and non-automatable.
+
+I also contributed to CI/CD integration and ensured tests were executed as part of the pipeline.
+
+Overall, I focused on ensuring application quality, stability, and faster delivery.
 
 
 Data-Driven Framework
