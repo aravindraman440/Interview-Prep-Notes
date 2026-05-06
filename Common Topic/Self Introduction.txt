@@ -16,7 +16,8 @@ I also have experience in API test automation using Postman and Rest Assured. Fo
 which supports features such as auto-waiting, parallel execution, fixtures, retries, test isolation, and built-in reporting, 
 providing a complete automation solution without the need for external runners.
 
-Recently, I took a short career break due to my marriage and to handle family responsibilities, as I am the primary person managing things at home. Now that everything is stable, I am fully ready and eager to restart my career.
+Recently, I took a short career break due to my marriage and to handle family responsibilities, 
+as I am the only person managing things at home. Now that everything is stable, I am fully ready and eager to restart my career.
 
 I am passionate about delivering high-quality, stable applications and continuously improving my testing skills.
 I am looking forward to contributing my expertise and growing in a challenging role.
