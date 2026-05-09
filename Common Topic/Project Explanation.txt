@@ -1,6 +1,7 @@
 *Elicheck Journey – Interview*
 
-Paragraph
+In my current role, I have been involved in testing three major servicing journeys-Elicheck, Overpayment, and Early Settlement across 
+multiple brands like Lloyds, Halifax, BOS, and MBNA.
 
 "In the Elicheck Journey, my work focused on the eligibility stage of the lending flow, where new customers like NTF or NTB users enter 
 their account details to check if they qualify for a personal loan. This journey validates key fields such as sort code, 
@@ -12,9 +13,6 @@ consistency, and a smooth customer experience."
 
 
 Overpayment Journey – Interview
-
-Paragraph
-
 "In the Overpayment Journey, I tested the experience for existing loan customers who want to make an extra payment toward their loan to reduce 
 the outstanding balance, future interest, or loan duration. This journey involves several flow types like Happy Path, Arrears Flow, No Direct Debit, 
 and DXC Offline scenarios across brands such as Lloyds, Halifax, BOS, and MBNA. My responsibilities included validating the interstitial screens -like 
@@ -25,9 +23,6 @@ and analytics validation to make sure the Overpayment flow was error-free, brand
 
 
 Early Settlement Journey - Interview
-
-Paragraph
-
 "In the Early Settlement Journey, I was responsible for validating the process where a customer chooses to close their loan early by paying the full 
 settlement amount. This journey calculates the outstanding balance, interest up to the settlement date, and any applicable fees. I tested scenarios such 
 as DD near-due dates, holiday shifts, quote retrieval accuracy, and API error handling to ensure the settlement amount shown to customers was correct. On 
@@ -39,8 +34,7 @@ financial accuracy and regulatory compliance, so I ensured all calculations and 
 Combined Project Explanation Paragraph (Elicheck + Overpayment + Early Settlement)
 
 
-"In my current role, I have been involved in testing three major servicing journeys-Elicheck, Overpayment, and Early Settlement across 
-multiple brands like Lloyds, Halifax, BOS, and MBNA. In the Elicheck Journey, I validated the entire eligibility flow for NTB/NTF customers, 
+" In the Elicheck Journey, I validated the entire eligibility flow for NTB/NTF customers, 
 including account-level validations, decision accuracy, updated Ul content, and the Edit Loan functionality. In the Overpayment Journey, I tested
  scenarios where customers make an extra payment toward their loan, covering multiple flows such as Happy Path, Arrears, and No Direct Debit. I validated 
 the interstitial screens, payment behaviour, and Adobe Analytics tagging to ensure every step fired correct journey events. In the Early Settlement Journey, 
