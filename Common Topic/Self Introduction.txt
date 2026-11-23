@@ -11,7 +11,7 @@ I have around 5 years of experience in Software Testing, with strong expertise i
 
 In automation, I have hands-on experience with Selenium using Java. I have worked extensively with TestNG, 
 Cucumber, Page Object Model (POM), Hybrid, Data-Driven, and Keyword-Driven frameworks.
-
+I also have experience in API testing and automation using Postman and Rest Assured.
 Meanwhile, I have been enhancing my automation skills by learning Playwright with TypeScript and JavaScript. 
 I have gained practical knowledge of the Playwright Test Runner and its features, such as auto-waiting, parallel execution,
 fixtures, retries, browser context isolation, and built-in reporting.
