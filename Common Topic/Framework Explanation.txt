@@ -23,4 +23,101 @@ in pom we have pages as a package in this package we have many implementation of
 since it is depricated therefore we are using regular X-path for regular pages packages which is followed by respective testcases
 this is our folder structure our define inside java ..
      In addition to that source main property we also have properties files and xml files 
-to root folder which constitude of our framework look like ..
+
+
+
+UI +API Explanation
+
+Physical Folder Structure
+
+Let me explain the physical folder structure of our framework.
+
+Our framework architect initially designed the framework architecture by creating reusable interfaces and their corresponding implementations.
+
+1. Design Package
+
+We had a design package containing interfaces with unimplemented methods.
+
+These interfaces defined the common browser interaction methods, such as clicking an element, entering text, getting text, selecting dropdown values, and handling browser operations.
+
+The main purpose was to achieve abstraction and maintain consistency across the framework.
+
+2. Wrapper Package
+
+We had a wrapper package that contained the implementation of the methods declared in the design interfaces.
+
+For example, if an interface contained a click method, the corresponding implementation was available in the wrapper class.
+
+Instead of directly writing Selenium WebDriver commands repeatedly in every test case, we reused these wrapper methods.
+
+We also implemented exception handling within the wrapper methods to handle Selenium-related exceptions and improve framework stability.
+
+3. Pages Package
+
+We followed the Page Object Model design pattern.
+
+Under the pages package, we maintained separate Java classes for individual application pages.
+
+Each page class contained the respective page locators and reusable business actions.
+
+We used regular Selenium locators such as XPath and CSS selectors instead of PageFactory-based element initialization.
+
+This helped us maintain locators and page actions separately from test logic.
+
+4. Step Definition Package
+
+Since we used Cucumber BDD, we maintained step definition classes.
+
+These classes connected the Gherkin steps written in feature files with the actual Java automation methods.
+
+For example, when a feature file contained a login step, the corresponding step definition method called the login functionality from the relevant page class.
+
+5. Hooks Package
+
+The hooks package contained the setup and teardown methods.
+
+We used Cucumber hooks such as @Before and @After to perform preconditions and post-execution activities.
+
+We also used TestNG annotations such as @BeforeMethod and @AfterMethod wherever required.
+
+These methods helped us manage browser initialization, test execution setup, screenshots, and cleanup activities.
+
+6. Utility Package
+
+The utility package contained reusable helper classes.
+
+We used Apache POI to read test data from Excel files.
+
+We also maintained the Extent Reports implementation to generate HTML execution reports.
+
+Additionally, we captured screenshots during test execution, particularly when test steps failed, to help with debugging and reporting.
+
+7. API Automation Package
+
+Apart from UI automation, we also performed API automation using Rest Assured.
+
+We maintained reusable API-related components to separate API request preparation, execution, and response validation.
+
+We used Rest Assured to automate HTTP methods such as GET, POST, PUT, PATCH, and DELETE.
+
+We validated response status codes, response bodies, headers, and JSON fields.
+
+We also used request specifications and response specifications to maintain reusable configurations.
+
+Where applicable, we maintained request payloads and test data separately to improve reusability.
+
+8. Configuration and Test Runner Files
+
+At the project root level, we maintained configuration files and XML files.
+
+The properties file contained environment-specific configurations such as application URLs, browser settings, and other execution-related details.
+
+We also maintained TestNG XML files to configure test execution, suites, and parallel execution wherever required.
+
+The Maven pom.xml file contained project dependencies and plugins required for framework execution.
+
+Overall, our framework was designed to achieve reusability, maintainability, scalability, and better test coverage across both UI and API automation.
+
+
+
+
