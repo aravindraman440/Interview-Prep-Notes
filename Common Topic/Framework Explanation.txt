@@ -28,96 +28,66 @@ this is our folder structure our define inside java ..
 
 UI +API Explanation
 
-Physical Folder Structure
+We used a hybrid automation framework supporting both UI and API automation.
 
-Let me explain the physical folder structure of our framework.
+For UI automation, we followed the Page Object Model design pattern. We used Core Java as the programming language, 
+Selenium WebDriver for browser automation, TestNG for test execution, Cucumber for BDD, Maven for build and dependency management, 
+Apache POI to read the test data from excel, and Extent Reports for reporting.
+For API automation, we used REST Assured.
 
-Our framework architect initially designed the framework architecture by creating reusable interfaces and their corresponding implementations.
-
+Shall i explain the physical structure of our framework?
 1. Design Package
-
-We had a design package containing interfaces with unimplemented methods.
-
-These interfaces defined the common browser interaction methods, such as clicking an element, entering text, getting text, selecting dropdown values, and handling browser operations.
-
-The main purpose was to achieve abstraction and maintain consistency across the framework.
-
-2. Wrapper Package
-
-We had a wrapper package that contained the implementation of the methods declared in the design interfaces.
-
-For example, if an interface contained a click method, the corresponding implementation was available in the wrapper class.
-
-Instead of directly writing Selenium WebDriver commands repeatedly in every test case, we reused these wrapper methods.
-
-We also implemented exception handling within the wrapper methods to handle Selenium-related exceptions and improve framework stability.
-
-3. Pages Package
-
-We followed the Page Object Model design pattern.
-
-Under the pages package, we maintained separate Java classes for individual application pages.
-
-Each page class contained the respective page locators and reusable business actions.
-
-We used regular Selenium locators such as XPath and CSS selectors instead of PageFactory-based element initialization.
-
-This helped us maintain locators and page actions separately from test logic.
-
-4. Step Definition Package
-
-Since we used Cucumber BDD, we maintained step definition classes.
-
-These classes connected the Gherkin steps written in feature files with the actual Java automation methods.
-
-For example, when a feature file contained a login step, the corresponding step definition method called the login functionality from the relevant page class.
-
-5. Hooks Package
-
-The hooks package contained the setup and teardown methods.
-
-We used Cucumber hooks such as @Before and @After to perform preconditions and post-execution activities.
-
-We also used TestNG annotations such as @BeforeMethod and @AfterMethod wherever required.
-
-These methods helped us manage browser initialization, test execution setup, screenshots, and cleanup activities.
-
-6. Utility Package
-
-The utility package contained reusable helper classes.
-
-We used Apache POI to read test data from Excel files.
-
-We also maintained the Extent Reports implementation to generate HTML execution reports.
-
-Additionally, we captured screenshots during test execution, particularly when test steps failed, to help with debugging and reporting.
-
-7. API Automation Package
-
-Apart from UI automation, we also performed API automation using Rest Assured.
-
-We maintained reusable API-related components to separate API request preparation, execution, and response validation.
-
-We used Rest Assured to automate HTTP methods such as GET, POST, PUT, PATCH, and DELETE.
-
-We validated response status codes, response bodies, headers, and JSON fields.
-
-We also used request specifications and response specifications to maintain reusable configurations.
-
-Where applicable, we maintained request payloads and test data separately to improve reusability.
-
-8. Configuration and Test Runner Files
-
-At the project root level, we maintained configuration files and XML files.
-
-The properties file contained environment-specific configurations such as application URLs, browser settings, and other execution-related details.
-
-We also maintained TestNG XML files to configure test execution, suites, and parallel execution wherever required.
-
-The Maven pom.xml file contained project dependencies and plugins required for framework execution.
-
-Overall, our framework was designed to achieve reusability, maintainability, scalability, and better test coverage across both UI and API automation.
+The Design package contains interfaces and enums.
+in this package we have 2 interface one is browser and another one is element 
+browser interface have browser releated interaction, and element interface has element releated interaction.
+These interfaces contain method declarations, and their actual implementations are provided in our 
+Selenium Base class. This helps us achieve abstraction.
+Base Package
+The Base package mainly contains the Driver Instance class and Selenium Base class.
+In the Driver Instance class, we use ThreadLocal WebDriver to maintain separate driver instances, 
+which is useful particularly when we perform parallel execution.
+The Selenium Base class acts as our wrapper class. It implements the browser and element interfaces and provides the actual 
+Selenium implementation for reusable methods such as click, enter text, get text, dropdown handling, waits, and other browser operations.
+This helps us avoid writing the same Selenium code repeatedly in different page classes.
+project specific base package
+We also have a project-specific method  for common execution-related activities.
+It contains common methods for browser initialization, application launch, test setup, and browser cleanup.
+We use the appropriate TestNG annotations to manage the test lifecycle.
+We also have a Retry mechanism, which can retry failed tests based on the configured retry policy, particularly for known transient automation failures.
+Pages Package
+The Pages package is where we implement the Page Object Model.
+Each application page has a separate Java class containing the respective locators and reusable page-level actions.
+We use Selenium locators such as ID, XPath, CSS, and other appropriate locator strategies.
+Test Cases Package
+The Test Cases package contains our actual executable UI test scenarios.
+For TestNG-based scenarios, we use the @Test annotation to define the tests.
+Since we used Cucumber, we had a Feature package containing scenarios written using Gherkin keywords such as Given, When, and Then, along with 
+a Step Definition package that mapped those steps to Java methods.
+We also had a Hooks package for Cucumber setup and teardown activities, such as preconditions, screenshots on failure, and cleanup.
+Utility Package
+Utility package is used to read the data from excel .Moreover it has extend report class which is used to generate the html report
+(inorder to excute the testcases and it takes the screenshot of every methods)
+We maintained properties files for environment and browser configurations, pom.xml for Maven dependencies, and testng.xml for TestNG suite configuration.
+For API automation, we had an API Base package containing our API Client interface with GET, POST, PUT, PATCH, and DELETE operations.
+The API Client package provided their REST Assured implementation.
+We also had an API Utility package for status-code, response-body, header, and JSON validations, and a Data package for 
+maintaining payload and test-data files such as JSON and CSV.
+So overall, our UI and API automation layers were maintained separately but were part of the same automation project, with reusable components
+to improve maintainability, scalability, and code reusability.
 
 
+Why can't you use a static WebDriver for parallel execution?"
 
+Good answer:
+
+During parallel execution, if multiple test threads share the same static WebDriver instance, one test can interfere with another test's browser session. By using ThreadLocal<WebDriver>, each execution thread can maintain its own WebDriver instance, which helps make parallel browser execution thread-safe.
+
+How do you handle authentication, headers and payloads?
+We keep common headers and authentication configuration reusable, usually through request specifications or dedicated API utilities. For dynamic authentication, such as bearer tokens, we retrieve the token and pass it through the Authorization header. For request bodies, we can use JSON files, Java objects/POJOs, maps, or dynamically generated payloads depending on the project requirement.
+
+
+How do you validate a JSON response?
+We validate the API response at different levels. First, we validate the HTTP status code. Then, depending on the requirement, we validate headers and response-body fields.
+
+For JSON responses, we use REST Assured's body() assertions or JsonPath to extract specific values and compare them against the expected results using TestNG assertions or Hamcrest matchers.
 
